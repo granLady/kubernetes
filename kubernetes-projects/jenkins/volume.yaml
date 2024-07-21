@@ -17,7 +17,7 @@ spec:
     name: pvc-jenkins
     namespace: devops-tool-suite
   capacity:
-    storage: 3Gi
+    storage: 5Gi
   accessModes:
   - ReadWriteOnce
   local:
@@ -42,4 +42,4 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 3Gi
+      storage: 5Gi
