@@ -14,12 +14,12 @@ metadata:
 spec:
   storageClassName: localstorage
   claimRef:
-    name: pvc-jenkins 
+    name: pvc-jenkins
     namespace: devops-tool-suite
   capacity:
     storage: 3Gi
   accessModes:
-    - ReadWriteOnce
+  - ReadWriteOnce
   local:
     path: /mnt
   nodeAffinity:
@@ -39,7 +39,7 @@ metadata:
 spec:
   storageClassName: localstorage
   accessModes:
-    - ReadWriteOnce
+  - ReadWriteOnce
   resources:
     requests:
-      storage: 2Gi
+      storage: 3Gi
