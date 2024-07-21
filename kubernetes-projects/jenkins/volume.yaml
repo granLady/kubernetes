@@ -21,7 +21,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   local:
-    path: /mnt
+    path: /home/vagrant/k8s_pvs
   nodeAffinity:
     required:
       nodeSelectorTerms:
