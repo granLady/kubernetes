@@ -21,7 +21,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   local:
-    path: /home/vagrant/k8s_pvs
+    path: /home/vagrant/k8s_pvs/jenkins
   nodeAffinity:
     required:
       nodeSelectorTerms:
