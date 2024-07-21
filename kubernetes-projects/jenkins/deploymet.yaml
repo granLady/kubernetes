@@ -19,7 +19,7 @@ spec:
       serviceAccountName: admin-jenkins
       containers:
       - name: deployment-jenkins
-        image: jenkins/jenkins:lts
+        image: bitnami/jenkins:latest
         resources:
           limits:
             memory: "900Mi"
