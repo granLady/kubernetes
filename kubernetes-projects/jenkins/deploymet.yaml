@@ -19,7 +19,7 @@ spec:
       serviceAccountName: admin-jenkins
       containers:
       - name: deployment-jenkins
-        image: jenkins/jenkins
+        image: enkins/jenkins:2.468-jdk17
         resources:
           limits:
             memory: "900Mi"
