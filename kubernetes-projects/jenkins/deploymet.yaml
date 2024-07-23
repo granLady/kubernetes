@@ -19,11 +19,11 @@ spec:
       serviceAccountName: admin-jenkins
       containers:
       - name: deployment-jenkins
-        image: jenkins/jenkins:2.256
+        image: jenkins/jenkins
         resources:
           limits:
             memory: "900Mi"
-            cpu: "700m"
+            cpu: "800m"
           requests:
             memory: "500Mi"
             cpu: "500m"
