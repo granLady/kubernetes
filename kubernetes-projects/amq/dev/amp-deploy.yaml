@@ -6,25 +6,25 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: artemis
+      app: artemis-dev
   template:
     metadata:
       labels:
-        app: artemis
+        app: artemis-dev
     spec:
       containers:
-        - name: artemis
-          image: apache/activemq-artemis
-          volumeMounts:
-            - name: artemis-data
-              mountPath: /var/lib/artemis/data
-            - name: artemis-config
-              mountPath: /var/lib/artemis/etc/artemis.conf
-              subPath: artemis.conf
-      volumes:
+      - name: artemis
+        image: apache/activemq-artemis
+        volumeMounts:
         - name: artemis-data
-          persistentVolumeClaim:
-            claimName: artemis-pvc
+          mountPath: /var/lib/artemis/data
         - name: artemis-config
-          configMap:
-            name: artemis-config
+          mountPath: /var/lib/artemis/etc/artemis.conf
+          subPath: artemis.conf
+      volumes:
+      - name: artemis-data
+        persistentVolumeClaim:
+          claimName: artemis-dev-pvc
+      - name: artemis-config
+        configMap:
+          name: artemis-config

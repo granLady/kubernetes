@@ -10,4 +10,4 @@ spec:
     port: 61616
     targetPort: 61616
   selector:
-    app: artemis
+    app: artemis-dev
