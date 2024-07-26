@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: artemis-pvc
+  name: artemis-dev-pvc
   namespace: artemis-dev
 spec:
   storageClassName: nfs-csi-inmediate
