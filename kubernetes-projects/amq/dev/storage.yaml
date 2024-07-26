@@ -7,9 +7,9 @@ spec:
     storage: 4Gi
   volumeMode: Filesystem
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
-  storageClassName: local-storage
+  storageClassName: nfs-csi-inmediate
   hostPath:
     path: /amq
 
@@ -20,8 +20,9 @@ metadata:
   name: artemis-pvc
   namespace: artemis-dev
 spec:
+  storageClassName: nfs-csi-inmediate
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 4Gi
