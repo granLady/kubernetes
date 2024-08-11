@@ -9,7 +9,7 @@ spec:
   accessModes:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
-  storageClassName: nfs-csi-inmediate
+  storageClassName: nfs-csi
   hostPath:
     path: /amq
 
@@ -20,7 +20,7 @@ metadata:
   name: artemis-dev-pvc
   namespace: artemis-dev
 spec:
-  storageClassName: nfs-csi-inmediate
+  storageClassName: nfs-csi
   accessModes:
   - ReadWriteMany
   resources:
