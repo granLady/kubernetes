@@ -12,7 +12,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: localstorage
+  storageClassName: nfs-csi
   claimRef:
     name: pvc-jenkins
     namespace: devops-tool-suite
@@ -37,7 +37,7 @@ metadata:
   name: pvc-jenkins
   namespace: devops-tool-suite
 spec:
-  storageClassName: localstorage
+  storageClassName: nfs-csi
   accessModes:
   - ReadWriteOnce
   resources:
