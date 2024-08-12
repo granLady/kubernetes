@@ -3,8 +3,6 @@ kind: StorageClass
 metadata:
   annotations:
   name: nfs-csi
-mountOptions:
-- nfsvers=4.1
 parameters:
   server: 10.0.0.10
 provisioner: nfs.csi.k8s.io
@@ -25,10 +23,7 @@ spec:
     storage: 5Gi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
-  mountOptions:
-    - hard
-    - nfsvers=4.1
+    - ReadWriteMany
   nfs:
     path: /home/vagrant/k8s_pvs/jenkins
     server: 10.0.0.10
@@ -42,7 +37,7 @@ metadata:
 spec:
   storageClassName: nfs-csi
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
