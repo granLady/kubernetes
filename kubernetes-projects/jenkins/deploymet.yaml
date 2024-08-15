@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-jenkins
+  name: jenkins
   namespace: jenkins
 spec:
   replicas: 1
@@ -18,7 +18,7 @@ spec:
         runAsUser: 1000
       serviceAccountName: admin-jenkins
       containers:
-      - name: deployment-jenkins
+      - name: jenkins
         image: jenkins/jenkins:2.468-jdk17
         resources:
           limits:
