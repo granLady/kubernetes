@@ -10,7 +10,7 @@ spec:
   capacity:
     storage: 5Gi
   nfs:
-    path: master-node:/var/nfs/k8s_pvs
+    path: /var/nfs/k8s_pvs
     server: 10.0.0.10
   storageClassName: nfs-csi
   volumeMode: Filesystem
