@@ -12,7 +12,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    path: master-node:/var/nfs/k8s_pvs/jenkins
+    path: master-node:/var/nfs/k8s_pvs
     server: 10.0.0.10
 
 ---
