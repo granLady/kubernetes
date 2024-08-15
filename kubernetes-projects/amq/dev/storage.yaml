@@ -10,8 +10,10 @@ spec:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
   storageClassName: nfs-csi
-  hostPath:
-    path: /amq
+  nfs:
+    path: /var/nfs/k8s_pvs
+    server: 10.0.0.10
+
 
 ---
 apiVersion: v1
@@ -26,3 +28,4 @@ spec:
   resources:
     requests:
       storage: 4Gi
+
